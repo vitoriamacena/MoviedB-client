@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoviedB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:family=Roboto:display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script type="text/javascript" src="script.js" async></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><span>Movie</span>dB</h1>
+            <input id="searchBar" onkeyup="searchFilme()" type="search" placeholder="Ex.: 61fec2ab9688cadf46f6ab29">
+        </nav>
+    </header>
+
+    <main id="main">
+        <h2 id="msg">ADICIONE OU<span>EDITE UM FILME</span></h2>
+        <form  id="form">
+            <div class="form-first">
+                <label for="ftitulo">Título</label>
+                <input placeholder="Ex.: Interestelar" name="ftitulo" id="ftitulo" type="text">
+                <label for="fnota">Nota</label>
+                <input placeholder="Ex.: 8.6" name="fnota" id="fnota" type="text">
+                <label for="fgenero">Gênero</label>
+                <input placeholder="Ex.: Ficção Científica" name="fgenero" id="fgenero" type="text">
+            </div>
+            <div class="form-sec">
+                <label for="fassistido">Assistido</label>
+                <input name="fassistido" id="fassistido" type="checkbox">
+                <label for="id">ID</label>
+                <input name="id" id="id" type="text">
+                <label for="fimagem">URL da Imagem</label>
+                <input name="fimagem" id="fimagem" type="text">
+                <button type="button" onclick="return submitForm(event)" id="fbtn">SALVAR</button>
+            </div>
+        </form>
+        
+        <div id="movies">
+            
+        </div>
+
+        <a class="up" href="#"><i class="material-icons">arrow_upward</i></a>
+        
+    </main>
+</body>
+</html>
