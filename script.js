@@ -15,20 +15,20 @@ function getFilmes() {
             listfilmes.insertAdjacentHTML('beforeend', `
             <div class="movie">
                 <div id="icons">
-                    <h3 onclick="deleteFilmes('${filme._id}')">✖</h3>
+                    <img id="delete" src="assets/delete.svg" onclick="deleteFilmes('${filme._id}')"></img>
+                    <img id="edit" src="assets/edit.svg" onclick="editaFilme('${filme._id}')"></img>
                 </div>
                 <img id="cover" src=${filme.imagem} alt="${filme.titulo}">
                 
-                <div class="movie-info"> 
+                <div class="main-info"> 
                     <h3 id="titulo">${filme.titulo}</h3>
                     <h3 id="nota">${filme.nota}</h3>
                 </div>
                 <div class="movie-info">
                     <h4 id="genero">${filme.genero}</h4>
-                    <h5 onclick="editaFilme('${filme._id}')">Editar</h5>
                 </div>
             </div>
-            `);
+            `);  
         });
     });
 };
@@ -56,13 +56,6 @@ async function submitForm(e) {
      nota: document.getElementById('fnota').value,
      imagem: document.getElementById('fimagem').value,
     }
-
-    // const filme = {        
-    //     titulo: titulo.value,
-    //     genero: genero.value,
-    //     nota: nota.value,
-    //     cover: cover.value
-    // }
 
     if(!editar) {
         
@@ -121,20 +114,20 @@ async function searchFilme() {
             listfilmes.insertAdjacentHTML('beforeend',
                 `<div class="movie">
                     <div id="icons">
-                        <h3 onclick="deleteFilmes('${filme._id}')">✖</h3>
+                        <img id="delete" src="assets/delete.svg" onclick="deleteFilmes('${filme._id}')"></img>
+                        <img id="edit" src="assets/edit.svg" onclick="editaFilme('${filme._id}')"></img>
                     </div>
                     <img id="cover" src=${filme.imagem} alt="${filme.titulo}">
                     
-                    <div class="movie-info"> 
+                    <div class="main-info"> 
                         <h3 id="titulo">${filme.titulo}</h3>
                         <h3 id="nota">${filme.nota}</h3>
                     </div>
                     <div class="movie-info">
                         <h4 id="genero">${filme.genero}</h4>
-                        <h5 onclick="editaFilme('${filme._id}')">Editar</h5>
                     </div>
                 </div>
-                `)};
+                `)}; 
     })
         
 }
