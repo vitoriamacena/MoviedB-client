@@ -65,7 +65,6 @@
 .main-info, .movie-info {
     width: 100%;
     position: absolute;
-    /* background: transparent; */
     margin: 1rem;
 }
 
@@ -77,16 +76,25 @@
 }
 
 #nota, #titulo {
-    /* position: sticky; */
     font-weight: 600;
-}
-
-#nota {
-    margin-left: .8rem;
-}
-
-#titulo, #nota {
     font-size: 1.1rem;
+}
+
+.note {
+    bottom: 1.6rem;
+    margin: 0 auto;
+    width: fit-content;
+    font-size: .8rem;
+    position: relative;
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, .2) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;    
+} 
+
+.note h3 {
+    font-weight: 600;
+    background: transparent;
+    padding: .4rem;
+    color: rgb(102, 102, 102);
 }
 
 .main-info h3 {
@@ -127,6 +135,7 @@ label {
 }
 
 nav {
+    z-index: 2;
     display: flex;
     justify-content: space-around;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -160,13 +169,17 @@ form button {
     height: 2rem;
     line-height: 1rem;
     border: none;
-    background: rgb(17, 16, 32);
+    background: rgb(25, 23, 46);
     color: azure;
     font-weight: 600;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;    border-radius: 4px;
     padding: 9px;
     border-radius:10px 10px 0;
     cursor: pointer;
+}
+
+form button:hover {
+    background: rgb(46, 45, 88);
 }
 
 #msg {

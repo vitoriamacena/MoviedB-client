@@ -22,10 +22,12 @@ function getFilmes() {
                 
                 <div class="main-info"> 
                     <h3 id="titulo">${filme.titulo}</h3>
-                    <h3 id="nota">${filme.nota}</h3>
                 </div>
                 <div class="movie-info">
                     <h4 id="genero">${filme.genero}</h4>
+                </div>
+                <div class="note">
+                <h3>${filme.nota}</h3>
                 </div>
             </div>
             `);  
