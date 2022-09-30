@@ -12,8 +12,8 @@
 <body>
     <header>
         <nav>
-            <img id="logo" src="/assets/logo.png"></img>
-            <input id="searchBar" onkeyup="searchFilme()" type="search" placeholder="Ex.: 61fec2ab9688cadf46f6ab29">
+            <a href="/"><img id="logo" src="/assets/logo.png"></img></a>
+            <input id="searchBar" onkeyup="searchFilme()" type="search" placeholder="Busca por ID">
         </nav>
     </header>
 
@@ -31,17 +31,16 @@
                
                 <label for="fgenero">Gênero</label>
                 <input placeholder="Ex.: Ficção Científica" name="fgenero" id="fgenero" type="text">
-                <label for="id">ID</label>
+                <label for="fimagem">URL da Imagem</label>
+                <input name="fimagem" id="fimagem" type="text">
                 <input name="id" id="id" type="text">
             </div>
 
             <div class="form-tert">
-                <label for="fimagem">URL da Imagem</label>
-                <input name="fimagem" id="fimagem" type="text">
                 <label for="fassistido">Assistido</label>
                 <input name="fassistido" id="fassistido" type="checkbox">
+                <button type="button" onclick="return submitForm(event)" id="fbtn">SALVAR</button>
             </div>
-            <button type="button" onclick="return submitForm(event)" id="fbtn">SALVAR</button>
         </form>
         
         <div id="movies">

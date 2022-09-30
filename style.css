@@ -191,6 +191,10 @@ form button:hover {
     display: none;
 }
 
+#id {
+    display: none;
+}
+
 input {
     outline: none;
     border: 2px solid #eee;
@@ -198,6 +202,12 @@ input {
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;    border-radius: 4px;
     padding: 9px;
     border-radius:10px 10px 0;
+}
+
+
+input:hover,
+input:focus {
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 1px 3px 0px, rgba(27, 31, 35, 0.25) 0px 0px 0px 1px;
 }
 
 .form-first, .form-sec, .form-tert {
@@ -222,7 +232,7 @@ form {
     }
 
     form button {
-    margin-top: 6rem;
+    margin-top: 2rem;
     }
     
     #movies {
